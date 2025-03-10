@@ -21,6 +21,7 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            position: relative;
         }
         .background-container {
             position: fixed;
@@ -103,6 +104,19 @@
             font-weight: bold;
             font-size: 1.8rem;
         }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: red;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            from { transform: translateY(-100vh); }
+            to { transform: translateY(100vh); }
+        }
     </style>
 </head>
 <body>
@@ -110,7 +124,7 @@
     
     <div class="popup-box" id="popup">
         <h2>You're Invited to a Special Iftar!</h2>
-        <button class="open-btn" onclick="openCard()">Open Invitation</button>
+        <button class="open-btn" onclick="openCard()">Open Riyaz Invitation</button>
     </div>
 
     <div class="card text-center" id="iftarCard">
@@ -126,7 +140,21 @@
     <script>
         function openCard() {
             document.getElementById('popup').style.display = 'none';
-            document.getElementById('iftarCard').style.display = 'block';
+            createConfetti();
+            setTimeout(() => {
+                document.getElementById('iftarCard').style.display = 'block';
+            }, 1000);
+        }
+        function createConfetti() {
+            for (let i = 0; i < 50; i++) {
+                let confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.animationDuration = `${Math.random() * 2 + 1}s`;
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 3000);
+            }
         }
     </script>
 </body>

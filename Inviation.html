@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iftar Dawat Invitation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDlvNmYza25vbDV4MHZucmdpODJrNzd0NTJua3M1Mnh4NXZpOWJlaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pn76eOWgPlk9W5RyIs/giphy.gif') no-repeat center center/cover;
+            margin: 0;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            position: relative;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 500px;
+            background: rgba(0, 0, 0, 0.85);
+            box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.5);
+            overflow: hidden;
+            color: #ffd700;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            border: 3px solid gold;
+            animation: glow 2s infinite alternate, slideIn 1s ease-in-out;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.islamicfinder.org/news/wp-content/uploads/2023/03/iftar-party-ideas.jpeg') no-repeat center center/cover;
+            filter: blur(8px);
+            opacity: 0.3;
+            z-index: -1;
+        }
+        @keyframes glow {
+            from { box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5); }
+            to { box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.9); }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        h1 {
+            font-size: 3rem;
+            font-family: 'Great Vibes', cursive;
+            color: #ffcc00;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #ff5733;
+            font-weight: bold;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        h3 {
+            font-size: 1.8rem;
+            color: #00ffcc;
+            animation: fadeIn 3s ease-in-out;
+        }
+        p {
+            font-size: 1.3rem;
+            color: white;
+            animation: fadeIn 3.5s ease-in-out;
+        }
+        .highlight {
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.5rem;
+            animation: fadeIn 4s ease-in-out;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ffcc00;
+            animation: fadeIn 4.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Iftar Dawat</h1>
+        <h2>Majid-E-Saad</h2>
+        <h3>Nazeer Shaik (ASI)</h3>
+        <p>You are invited to a special Iftar gathering.</p>
+        <p><strong>Address:</strong> 9/6th Lane, Guntur</p>
+        <p class="highlight">On Saturday, 15<sup>th</sup> March 2025</p>
+        <p class="highlight">Dinner: 7:00 PM</p>
+        <div class="footer">We look forward to your presence!</div>
+    </div>
+</body>
+</html>
